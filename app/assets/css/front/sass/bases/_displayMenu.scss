@@ -1,0 +1,75 @@
+.menu {
+  width: 25%;
+  min-width: 250px;
+  height:100%;
+  background-color: rgba(255,255,255, 0.9);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+  transition-property: right;
+  box-shadow: 2px 0 0.5em gray;
+  z-index: 1000;
+  ul {
+    margin-left: 40px;
+    li {
+      list-style: none;
+      margin: 50px 0;
+      a.border {
+        padding: 0.5em 0.6em 0.4em 0.3em;
+        position: relative;
+        font-size: 1.3em;
+        font-weight: 500;
+        text-transform: uppercase;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+        }
+        &::before,
+        &::after {
+          border: 2px solid transparent;
+          width: 0;
+          height: 0;
+        }
+        &::before {
+          top: 0;
+          left: -4px;
+        }
+        &::after {
+          bottom: -4px;
+          right: 0;
+        }
+        &:hover::before,
+        &:hover::after {
+          width: 100%;
+          height: 100%;
+        }
+        &:hover::before {
+          border-top-color: black;
+          border-right-color: black;
+          transition:
+            width 0.20s ease-out,
+            height 0.20s ease-out 0.20s;
+        }
+        &:hover::after {
+          border-bottom-color: black;
+          border-left-color: black;
+          transition:
+            border-color 0s ease-out 0.4s,
+            width 0.20s ease-out 0.4s,
+            height 0.20s ease-out 0.60s;
+        }
+      }
+    }
+  }
+}
+.activate {
+  right: calc(100% - 25%);
+}
+.deactivate {
+  right: calc(100% + 25%);
+}

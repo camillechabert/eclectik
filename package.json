@@ -1,0 +1,23 @@
+{
+  "name": "eclectik",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "camille chabert",
+  "license": "ISC",
+  "devDependencies": {
+    "@aquafadas/gulp-php-minify": "^0.3.1",
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-inject": "^4.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-webserver": "^0.9.1",
+    "install": "^0.8.4",
+    "npm": "^4.1.1"
+  }
+}

@@ -1,0 +1,205 @@
+div.video {
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+  div.video video {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute; }
+
+html body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  margin: 0;
+  box-sizing: border-box; }
+  html body .main-content {
+    width: 91%;
+    height: 100%;
+    margin: auto;
+    max-height: 85%;
+    overflow: hidden;
+    position: relative; }
+html a {
+  text-decoration: none;
+  color: #000000;
+  cursor: pointer; }
+
+footer {
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0; }
+  footer ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    footer ul li {
+      font-size: 0.8em;
+      margin: 0 10px; }
+      footer ul li span {
+        font-weight: 700; }
+
+header #btn-menu {
+  width: 25px;
+  height: 20px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  position: fixed;
+  top: 50%;
+  left: 15px;
+  z-index: 100000; }
+  header #btn-menu span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 25px;
+    background: #000;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.20s ease-in-out; }
+    header #btn-menu span:nth-child(1) {
+      top: 0;
+      transform-origin: left center; }
+    header #btn-menu span:nth-child(2) {
+      top: 8px;
+      transform-origin: left center; }
+    header #btn-menu span:nth-child(3) {
+      top: 16px;
+      transform-origin: left center; }
+header #btn-menu.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 0;
+  left: 3px; }
+header #btn-menu.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0; }
+header #btn-menu.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 23px;
+  left: 4px; }
+header > div:first-child {
+  height: 60px;
+  width: 100%;
+  text-align: center; }
+  header > div:first-child a {
+    cursor: pointer; }
+    header > div:first-child a img {
+      width: 100px;
+      padding: 15px 0 0 0; }
+header div.social-link {
+  position: fixed;
+  right: 16px;
+  top: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70px; }
+  header div.social-link > div {
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    background-color: #0f0f0f; }
+    header div.social-link > div > a > img {
+      width: 17px;
+      padding: 7px 0 0 0; }
+
+.menu {
+  width: 25%;
+  min-width: 250px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-timing-function: linear;
+  transition-duration: 0.5s;
+  transition-property: right;
+  box-shadow: 2px 0 0.5em gray;
+  z-index: 1000; }
+  .menu ul {
+    margin-left: 40px; }
+    .menu ul li {
+      list-style: none;
+      margin: 50px 0; }
+      .menu ul li a.border {
+        padding: 0.5em 0.6em 0.4em 0.3em;
+        position: relative;
+        font-size: 1.3em;
+        font-weight: 500;
+        text-transform: uppercase; }
+        .menu ul li a.border::before, .menu ul li a.border::after {
+          content: '';
+          position: absolute; }
+        .menu ul li a.border::before, .menu ul li a.border::after {
+          border: 2px solid transparent;
+          width: 0;
+          height: 0; }
+        .menu ul li a.border::before {
+          top: 0;
+          left: -4px; }
+        .menu ul li a.border::after {
+          bottom: -4px;
+          right: 0; }
+        .menu ul li a.border:hover::before, .menu ul li a.border:hover::after {
+          width: 100%;
+          height: 100%; }
+        .menu ul li a.border:hover::before {
+          border-top-color: black;
+          border-right-color: black;
+          transition: width 0.20s ease-out, height 0.20s ease-out 0.20s; }
+        .menu ul li a.border:hover::after {
+          border-bottom-color: black;
+          border-left-color: black;
+          transition: border-color 0s ease-out 0.4s, width 0.20s ease-out 0.4s, height 0.20s ease-out 0.60s; }
+
+.activate {
+  right: calc(100% - 25%); }
+
+.deactivate {
+  right: calc(100% + 25%); }
+
+html, video, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*# sourceMappingURL=global.css.map */

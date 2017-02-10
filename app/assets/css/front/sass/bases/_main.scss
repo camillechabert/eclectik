@@ -1,0 +1,21 @@
+html {
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin:0;
+    box-sizing: border-box;
+    .main-content {
+      width: 91%;
+      height: 100%;
+      margin: auto;
+      max-height: 85%;
+      overflow: hidden;
+      position: relative;
+    }
+  }
+  a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+  }
+}

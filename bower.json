@@ -1,0 +1,17 @@
+{
+  "name": "eclectik",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "camille chabert"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
