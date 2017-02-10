@@ -2,7 +2,6 @@
     <head>
         <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
         <!-- inject:css -->
-        <link rel="stylesheet" href="/app/assets/css/front/*.css">
         <link rel="stylesheet" href="/app/assets/css/front/global.css">
         <!-- endinject -->
     </head>

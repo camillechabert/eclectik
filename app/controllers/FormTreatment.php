@@ -9,31 +9,17 @@
         private $name;
         private $message;
         private $email_exp = '/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
-        private $text_exp = "/^[A-Za-z ,.'-]+$/";
+        private $text_exp = "/^[0-9A-Za-z ,.;:_?!*()éèùuûàçîï%€$&@'-+$]/";
         public static $errors;
 
         public function __construct($datas) {
             $this->datas = $datas;
-            var_dump($this->datas);
             $this->name = $datas['name'];
             $this->email = $datas['email'];
             $this->message = $datas['message'];
-            $this->textCheck();
             $this->mailCatcher();
+            $this->textCatcher();
             $this->saveData();
-        }
-
-        public function textCheck() {
-            if(!preg_match($this->text_exp, $this->name)) {
-                self::$errors['name'] = $this->createError("nom");
-            }
-            if(!preg_match($this->text_exp, $this->message)) {
-                self::$errors['message'] = $this->createError("message");
-            }
-        }
-
-        private function createError($el) {
-            return "Votre " . $el . " contient des caractères non valident";
         }
 
         private function mailCatcher() {
@@ -43,9 +29,22 @@
             }
         }
 
+        private function createError($el) {
+            return "Votre " . $el . " contient des caractères non valident";
+        }
+
+        public function textCatcher() {
+            if(!preg_match($this->text_exp, $this->name)) {
+                self::$errors['name'] = $this->createError("nom");
+            }
+            if(!preg_match($this->text_exp, $this->message)) {
+                self::$errors['message'] = $this->createError("message");
+            }
+        }
+
         private function saveData() {
             $pdo = new database();
-            $sql = "INSERT INTO formulaire (destinataire, email, message) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO formulaire (destinataire, email, message) VALUES (:name, :email, :message)";
             $pdo->request_db($sql, $this->datas);
         }
 
