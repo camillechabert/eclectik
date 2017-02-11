@@ -20,7 +20,5 @@ Class contactTreatment {
         $sql = "INSERT INTO formulaire (destinataire, email, message) VALUES (:name, :email, :message)";
         $pdo->request_db($sql, $this->datas);
     }
-
-
 }
 ?>

@@ -12,17 +12,18 @@ include '../helpers/contactFromPost.php';
     </head>
     <body>
         <?php include 'header.php' ?>
-        <?php var_dump(FormTreatment::$errors) ?>
         <section class="main-content">
-            <form name="contact_form" action="" method="post">
-                <label for="name">Nom</label>
-                <p><input type="text" name="name"/></p>
-                <label for="email">Email</label>
-                <p><input type="text" name="email"/></p>
-                <label for="message">Message</label>
-                <p><textarea name="message" cols="30" rows="10"></textarea></p>
-                <p><input type="submit" value="envoyer"></p>
-            </form>
+            <div class="contact">
+                <form name="contact_form" action="" method="post">
+                    <label for="name">Nom</label>
+                    <p><input type="text" name="name"/></p>
+                    <label for="email">Email</label>
+                    <p><input type="text" name="email"/></p>
+                    <label for="message">Message</label>
+                    <p><textarea name="message" cols="30" rows="10"></textarea></p>
+                    <p><input type="submit" value="envoyer"></p>
+                </form>
+            </div>
         </section>
         <!-- inject:js -->
         <script src="/app/assets/js/global.js"></script>

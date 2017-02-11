@@ -1,0 +1,7 @@
+.idea/
+app/assets/images/photos/
+bower_components/
+composer.json
+composer.lock
+node_modules/
+vendor/
