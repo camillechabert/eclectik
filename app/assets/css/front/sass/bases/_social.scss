@@ -1,0 +1,28 @@
+div.social-link {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > a {
+    position: relative;
+    > img {
+      width: 17px;
+      padding: 10px 0 0 0;
+      position: absolute;
+      z-index: 1000;
+      left: 9px;
+      top: 4px;
+    }
+    > div {
+      width: 35px;
+      height: 35px;
+      margin: 5px 0;
+      background-color: #0f0f0f;
+    }
+    >div:hover {
+      transform: rotate(45deg);
+      transition: 0.1s ease-in-out;
+    }
+  }
+}

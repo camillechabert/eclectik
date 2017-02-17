@@ -10,7 +10,7 @@ const paths = {
     phpAdmin : 'app/viewsAdmin/*.php',
     cssAdmin : 'app/assets/css/admin/',
     cssFront : 'app/assets/css/front/',
-    sassAdmin : 'app/assets/css/admin/*.scss',
+    sassAdmin : 'app/assets/css/admin/sass/*.scss',
     sassFront : 'app/assets/css/front/sass/**/*.scss',
     js : 'app/assets/js/*.js',
     front : 'app/viewsUser/',
@@ -43,6 +43,11 @@ gulp.task('sass-front', function() {
     sassCompile(paths.sassFront, paths.cssFront);
 });
 
+////materialize
+gulp.task('materialize', function() {
+    sassCompile('bower_components/materialize-src/sass/materialize.scss', paths.cssAdmin);
+});
+
 //// Inject sources
 gulp.task('inject-back', function () {
     injectSources(paths.phpAdmin, paths.js, paths.cssAdmin, paths.admin);
@@ -52,12 +57,13 @@ gulp.task('inject-front', function () {
 });
 
 // work in progress
-gulp.task('serve', ['sass-admin', 'sass-front', 'inject-back', 'inject-front'], function() {
+gulp.task('serve', ['sass-admin', 'sass-front', 'materialize', 'inject-back', 'inject-front'], function() {
     browserSync.init({
         proxy: 'www.eclectik.dev'
     });
     gulp.watch(paths.sassFront, ['sass-front']);
     gulp.watch(paths.sassAdmin, ['sass-admin']);
+    gulp.watch('app/assets/materialize-src/sass/materialize.scss', ['materialize']);
     gulp.watch(paths.js, ['sass-admin', 'sass-front']).on('change', browserSync.reload);
     gulp.watch(paths.php).on('change', browserSync.reload);
 });

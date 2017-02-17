@@ -1,10 +1,13 @@
 <footer>
     <ul>
         <li>
-            <a href="">Mentions Légales</a>
+            <a href="">cgu</a>
         </li>
         <li>
-            <a href="">CGU</a>
+            <a href="">mentions légales</a>
+        </li>
+        <li>
+            <a href="">site by <span>Camille Chabert</span></a>
         </li>
     </ul>
 </footer>

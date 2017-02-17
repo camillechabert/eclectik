@@ -1,64 +1,84 @@
-div.video {
+div.video_content {
   overflow: hidden;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0; }
-  div.video video {
-    width: 100%;
-    height: 100%;
+  position: relative;
+  width: 100%; }
+  div.video_content div.video {
+    overflow: hidden;
     top: 0;
-    left: 0;
-    object-fit: cover;
-    position: absolute; }
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    div.video_content div.video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
 
 div.contact {
   width: 100%;
-  height: 100%;
+  overflow: hidden;
   position: relative;
   background: url(../../images/photos/1.jpg) center center no-repeat; }
 
-html body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  margin: 0;
-  box-sizing: border-box; }
-  html body .main-content {
-    width: 91%;
-    height: 100%;
-    margin: auto;
-    max-height: 85%;
-    overflow: hidden;
-    position: relative; }
-
-html a {
-  text-decoration: none;
-  color: #000000;
-  cursor: pointer; }
+header {
+  height: 60px;
+  width: 100%;
+  text-align: center; }
+  header a {
+    cursor: pointer; }
+    header a img {
+      width: 100px;
+      padding: 15px 0 0 0; }
 
 footer {
   width: 100%;
-  height: 60px;
-  background-color: #ffffff;
-  position: fixed;
-  bottom: 0; }
+  height: 50px; }
   footer ul {
     height: 100%;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-direction: row;
-        flex-direction: row;
     -ms-flex-pack: center;
         justify-content: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
     -ms-flex-align: center;
         align-items: center; }
     footer ul li {
-      font-size: 0.8em;
-      margin: 0 10px; }
+      margin: 0 10px;
+      font-size: 0.75rem; }
       footer ul li span {
         font-weight: 700; }
 
-header #btn-menu {
+html body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  html body a {
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer; }
+  html body section {
+    -ms-flex: 1;
+        flex: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row; }
+    html body section div.column {
+      width: 60px;
+      display: -ms-flexbox;
+      display: flex; }
+    html body section div.main_content {
+      -ms-flex: 1;
+          flex: 1;
+      display: -ms-flexbox;
+      display: flex; }
+
+#btn-menu {
   width: 25px;
   height: 20px;
   -ms-transform: rotate(0deg);
@@ -69,7 +89,7 @@ header #btn-menu {
   top: 50%;
   left: 15px;
   z-index: 100000; }
-  header #btn-menu span {
+  #btn-menu span {
     display: block;
     position: absolute;
     height: 2px;
@@ -80,65 +100,34 @@ header #btn-menu {
     -ms-transform: rotate(0deg);
         transform: rotate(0deg);
     transition: 0.20s ease-in-out; }
-    header #btn-menu span:nth-child(1) {
+    #btn-menu span:nth-child(1) {
       top: 0;
       -ms-transform-origin: left center;
           transform-origin: left center; }
-    header #btn-menu span:nth-child(2) {
+    #btn-menu span:nth-child(2) {
       top: 8px;
       -ms-transform-origin: left center;
           transform-origin: left center; }
-    header #btn-menu span:nth-child(3) {
+    #btn-menu span:nth-child(3) {
       top: 16px;
       -ms-transform-origin: left center;
           transform-origin: left center; }
 
-header #btn-menu.open span:nth-child(1) {
+#btn-menu.open span:nth-child(1) {
   -ms-transform: rotate(45deg);
       transform: rotate(45deg);
   top: 0;
   left: 3px; }
 
-header #btn-menu.open span:nth-child(2) {
+#btn-menu.open span:nth-child(2) {
   width: 0%;
   opacity: 0; }
 
-header #btn-menu.open span:nth-child(3) {
+#btn-menu.open span:nth-child(3) {
   -ms-transform: rotate(-45deg);
       transform: rotate(-45deg);
   top: 23px;
   left: 4px; }
-
-header > div:first-child {
-  height: 60px;
-  width: 100%;
-  text-align: center; }
-  header > div:first-child a {
-    cursor: pointer; }
-    header > div:first-child a img {
-      width: 100px;
-      padding: 15px 0 0 0; }
-
-header div.social-link {
-  position: fixed;
-  right: 16px;
-  top: 45%;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-      flex-direction: column;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  height: 70px; }
-  header div.social-link > div {
-    text-align: center;
-    vertical-align: middle;
-    width: 30px;
-    height: 30px;
-    background-color: #0f0f0f; }
-    header div.social-link > div > a > img {
-      width: 17px;
-      padding: 7px 0 0 0; }
 
 .menu {
   width: 25%;
@@ -199,6 +188,35 @@ header div.social-link {
 
 .deactivate {
   right: calc(100% + 25%); }
+
+div.social-link {
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  div.social-link > a {
+    position: relative; }
+    div.social-link > a > img {
+      width: 17px;
+      padding: 10px 0 0 0;
+      position: absolute;
+      z-index: 1000;
+      left: 9px;
+      top: 4px; }
+    div.social-link > a > div {
+      width: 35px;
+      height: 35px;
+      margin: 5px 0;
+      background-color: #0f0f0f; }
+    div.social-link > a > div:hover {
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+      transition: 0.1s ease-in-out; }
 
 html, video, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;

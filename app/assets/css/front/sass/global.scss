@@ -4,13 +4,22 @@
 /////////////
 
 /// bases ////
-@import 'bases/main';
-@import 'bases/footer';
 @import 'bases/header';
-@import 'bases/displayMenu';
+@import 'bases/footer';
+@import 'bases/main-content';
+@import 'bases/nav';
+@import 'bases/displayNav';
+@import 'bases/social';
 /////////////
 
 /// vendor ////
 @import 'vendor/reset';
 @import 'vendor/normalize';
 ///////////////
+
+
+
+
+
+
+

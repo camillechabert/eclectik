@@ -1,8 +1,7 @@
 <?php
 
-include '../helpers/contactFromPost.php';
+include '../helpers/contactFromPost.php'; ?>
 
-?>
 <html>
     <head>
         <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
@@ -11,8 +10,10 @@ include '../helpers/contactFromPost.php';
         <!-- endinject -->
     </head>
     <body>
-        <?php include 'header.php' ?>
-        <section class="main-content">
+    <?php include 'header.php'; ?>
+    <section>
+        <?php include "nav.php"; ?>
+        <div class="main_content">
             <div class="contact">
                 <form name="contact_form" action="" method="post">
                     <label for="name">Nom</label>
@@ -24,10 +25,13 @@ include '../helpers/contactFromPost.php';
                     <p><input type="submit" value="envoyer"></p>
                 </form>
             </div>
-        </section>
-        <!-- inject:js -->
-        <script src="/app/assets/js/global.js"></script>
-        <!-- endinject -->
-        <?php include 'footer.php' ?>
+        </div>
+        <?php include 'social.php'; ?>
+    </section>
+    <?php include 'footer.php'; ?>
+    <!-- inject:js -->
+    <script src="/app/assets/js/global.js"></script>
+    <script src="/app/assets/js/materialize.min.js"></script>
+    <!-- endinject -->
     </body>
 </html>
