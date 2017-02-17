@@ -15,9 +15,53 @@ div.video_content {
 
 div.contact {
   width: 100%;
-  overflow: hidden;
-  position: relative;
-  background: url(../../images/photos/1.jpg) center center no-repeat; }
+  background: url(../../images/photos/1.jpg) center center no-repeat;
+  background-size: cover;
+  position: relative; }
+  div.contact h1 {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 1.8rem;
+    top: 0;
+    left: 0;
+    transform: rotate(-90deg) translateY(-35px) translateX(-85px); }
+  div.contact div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; }
+    div.contact div div {
+      width: 48%; }
+      div.contact div div form {
+        margin: 170px 0 0 200px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        min-width: 280px; }
+        div.contact div div form label {
+          text-transform: uppercase;
+          color: #fff;
+          padding: 15px 0 3px 0;
+          text-shadow: 1px 1px #424242; }
+        div.contact div div form p input[type=text], div.contact div div form p textarea {
+          width: 100%;
+          padding: 8px 14px;
+          display: inline-block;
+          border: 1px solid dimgrey;
+          opacity: 0.8; }
+        div.contact div div form p input[type=submit] {
+          width: 100px;
+          background-color: #000;
+          color: #fff;
+          padding: 10px 15px;
+          margin: 15px 0;
+          border: none;
+          cursor: pointer;
+          text-transform: uppercase;
+          opacity: 0.9; }
+        div.contact div div form p:last-child {
+          align-self: flex-end; }
 
 header {
   height: 60px;
@@ -40,7 +84,9 @@ footer {
     align-items: center; }
     footer ul li {
       margin: 0 10px;
-      font-size: 0.75rem; }
+      font-size: 0.65rem; }
+      footer ul li a {
+        text-transform: uppercase; }
       footer ul li span {
         font-weight: 700; }
 
@@ -85,7 +131,7 @@ html body {
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
-    transition: 0.20s ease-in-out; }
+    transition: 0.40s ease-in-out; }
     #btn-menu span:nth-child(1) {
       top: 0;
       transform-origin: left center; }
@@ -172,22 +218,25 @@ div.social-link {
   justify-content: center;
   align-items: center; }
   div.social-link > a {
-    position: relative; }
-    div.social-link > a > img {
-      width: 17px;
-      padding: 10px 0 0 0;
-      position: absolute;
-      z-index: 1000;
-      left: 9px;
-      top: 4px; }
+    width: 33px;
+    height: 33px;
+    margin: 6px 0; }
     div.social-link > a > div {
-      width: 35px;
-      height: 35px;
-      margin: 5px 0;
-      background-color: #0f0f0f; }
-    div.social-link > a > div:hover {
-      transform: rotate(45deg);
-      transition: 0.1s ease-in-out; }
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #0f0f0f;
+      transition: all 0.2s ease-in-out; }
+      div.social-link > a > div img {
+        width: 17px; }
+    div.social-link > a div.facebook:hover {
+      transform: rotate(35deg);
+      transition: 0.2s ease-in-out; }
+    div.social-link > a div.instagram:hover {
+      transform: rotate(-35deg);
+      transition: 0.2s ease-in-out; }
 
 html, video, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;

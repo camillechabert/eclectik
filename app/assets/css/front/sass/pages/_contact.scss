@@ -1,7 +1,62 @@
 div.contact {
   width: 100%;
-  overflow: hidden;
-  position: relative;
   background: url(../../images/photos/1.jpg) center center no-repeat;
-
+  background-size: cover;
+  position: relative;
+  h1 {
+    color: #fff;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 1.8rem;
+    top:0;
+    left:0;
+    transform: rotate(-90deg) translateY(-35px)  translateX(-85px);
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    div {
+      width: 48%;
+      form {
+        margin: 170px 0 0 200px;
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        min-width: 280px;
+        label {
+          text-transform: uppercase;
+          color : #fff;
+          padding: 15px 0 3px 0;
+          text-shadow: 1px 1px #424242;
+        }
+        p {
+          input[type=text], textarea {
+            width: 100%;
+            padding: 8px 14px;
+            display: inline-block;
+            border: 1px solid dimgrey;
+            opacity: 0.8;
+          }
+        }
+        p {
+          input[type=submit] {
+            width: 100px;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 15px;
+            margin: 15px 0;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            opacity: 0.9;
+          }
+        }
+        p:last-child {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
 }

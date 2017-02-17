@@ -9,7 +9,10 @@ footer {
     align-items: center;
     li {
       margin: 0 10px;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
+      a {
+        text-transform: uppercase;
+      }
       span {
         font-weight: 700;
       }

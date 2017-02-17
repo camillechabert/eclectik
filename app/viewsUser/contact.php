@@ -15,15 +15,22 @@ include '../helpers/contactFromPost.php'; ?>
         <?php include "nav.php"; ?>
         <div class="main_content">
             <div class="contact">
-                <form name="contact_form" action="" method="post">
-                    <label for="name">Nom</label>
-                    <p><input type="text" name="name"/></p>
-                    <label for="email">Email</label>
-                    <p><input type="text" name="email"/></p>
-                    <label for="message">Message</label>
-                    <p><textarea name="message" cols="30" rows="10"></textarea></p>
-                    <p><input type="submit" value="envoyer"></p>
-                </form>
+                <h1>contact</h1>
+                <div>
+                    <div class="form">
+                        <form name="contact_form" action="" method="post">
+                            <label for="name">Nom</label>
+                            <p><input type="text" name="name"/></p>
+                            <label for="email">Email</label>
+                            <p><input type="text" name="email"/></p>
+                            <label for="message">Message</label>
+                            <p><textarea name="message" cols="30" rows="10"></textarea></p>
+                            <p><input type="submit" value="envoyer"></p>
+                        </form>
+                    </div>
+                    <div class="infos">
+                    </div>
+                </div>
             </div>
         </div>
         <?php include 'social.php'; ?>
@@ -31,7 +38,6 @@ include '../helpers/contactFromPost.php'; ?>
     <?php include 'footer.php'; ?>
     <!-- inject:js -->
     <script src="/app/assets/js/global.js"></script>
-    <script src="/app/assets/js/materialize.min.js"></script>
     <!-- endinject -->
     </body>
 </html>
