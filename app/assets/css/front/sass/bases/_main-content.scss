@@ -11,6 +11,14 @@ html {
       color: #000000;
       cursor: pointer;
     }
+    h1.title {
+      color: #fff;
+      text-transform: uppercase;
+      position: absolute;
+      font-size: 1.8rem;
+      top:0;
+      left:0;
+    }
     section {
       flex: 1;
       display: flex;

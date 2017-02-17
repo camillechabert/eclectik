@@ -15,7 +15,7 @@ include '../helpers/contactFromPost.php'; ?>
         <?php include "nav.php"; ?>
         <div class="main_content">
             <div class="contact">
-                <h1>contact</h1>
+                <h1 class="title">contact</h1>
                 <div>
                     <div class="form">
                         <form name="contact_form" action="" method="post">
@@ -29,6 +29,12 @@ include '../helpers/contactFromPost.php'; ?>
                         </form>
                     </div>
                     <div class="infos">
+                        <h2>maïlys flambeau</h2>
+                        <p>mailysflambeau@test.com</p>
+                        <p>Bordeaux, France</p>
+                        <a href="https://fr.linkedin.com/in/mailys-flambeau-32b673114" target="_blank">
+                            <img src="../assets/images/linkedin.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -38,6 +44,7 @@ include '../helpers/contactFromPost.php'; ?>
     <?php include 'footer.php'; ?>
     <!-- inject:js -->
     <script src="/app/assets/js/global.js"></script>
+    <script src="/app/assets/js/materialize.min.js"></script>
     <!-- endinject -->
     </body>
 </html>
