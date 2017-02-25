@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Eclectik Back Office</title>
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="../assets/css/admin/materialize.css">
     <link rel="stylesheet" href="../assets/css/admin/global.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body class="cyan darken-4 loaded">
       <div id="login-page" class="row">
@@ -31,7 +31,7 @@
            </div>
            <div class="row">
              <div class="input-field col s12">
-               <a href="#" class="btn waves-effect blue-grey darken-4 col s12">CONNEXION</a>
+               <a href="admin.php" class="btn waves-effect blue-grey darken-4 col s12">CONNEXION</a>
              </div>
            </div>
            <div class="row">

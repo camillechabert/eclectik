@@ -1,9 +1,8 @@
-#login-page {
-  width: 300px;
-  margin-top: 10%;
-}
+//global css
+@import "bases/adminContent";
+@import "pages/login";
 
-.logo-form {
-  width: 150px !important;
-  padding-top: 20px;
-}
+//pages
+@import "pages/adminAccueil";
+@import "pages/adminContact";
+

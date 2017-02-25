@@ -1,3 +1,30 @@
+html {
+  height: 100%; }
+  html body {
+    height: 100%; }
+    html body nav div ul li img {
+      width: 110px;
+      margin: 15px 0 0 10px; }
+
+.category {
+  padding: 0; }
+
+.sidebarPos {
+  position: relative;
+  height: auto; }
+
+.absoluteNav {
+  position: absolute !important;
+  min-width: 200px; }
+
+.sectionNav {
+  margin-left: 15px; }
+
+@media only screen and (max-width: 992px) {
+  .side-nav.fixed {
+    -ms-transform: translateX(0%);
+        transform: translateX(0%); } }
+
 #login-page {
   width: 300px;
   margin-top: 10%; }

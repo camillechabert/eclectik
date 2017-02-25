@@ -10,7 +10,7 @@ const paths = {
     phpAdmin : 'app/viewsAdmin/*.php',
     cssAdmin : 'app/assets/css/admin/',
     cssFront : 'app/assets/css/front/',
-    sassAdmin : 'app/assets/css/admin/sass/*.scss',
+    sassAdmin : 'app/assets/css/admin/sass/**/*.scss',
     sassFront : 'app/assets/css/front/sass/**/*.scss',
     js : 'app/assets/js/*.js',
     front : 'app/viewsUser/',
@@ -62,7 +62,7 @@ gulp.task('serve', ['sass-admin', 'sass-front', 'materialize', 'inject-back', 'i
         proxy: 'www.eclectik.dev'
     });
     gulp.watch(paths.sassFront, ['sass-front']);
-    gulp.watch(paths.sassAdmin, ['sass-admin']);
+    gulp.watch(paths.sassAdmin, ['sass-admin']).on('change', browserSync.reload);
     gulp.watch('app/assets/materialize-src/sass/materialize.scss', ['materialize']);
     gulp.watch(paths.js, ['sass-admin', 'sass-front']).on('change', browserSync.reload);
     gulp.watch(paths.php).on('change', browserSync.reload);
