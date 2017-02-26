@@ -32,6 +32,7 @@ class database {
         } catch (PDOException $e) {
             $this->queryErr = true;
             $this->errMsg = 'Query error : ' . $e->getMessage();
+            var_dump($this->errMsg);
         }
         return $stt;
     }
