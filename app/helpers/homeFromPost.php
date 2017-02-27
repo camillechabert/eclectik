@@ -2,13 +2,17 @@
 
     include '../controllers/homeTreatment.php';
 
-    if (isset($_POST) && count($_POST) > 0) {
-
-        if (empty(trim($_POST['slf'])) || empty(trim($_POST['sli'])) || empty(trim($_POST['mentions'])) || empty(trim($_POST['cgu']))) {
-            FormTreatment::$errors['empty'] = 'Un des Champs est vide';
+    if (isset($_POST)) {
+        if (count($_POST) < 0) {
+           $error = homeTreatment::$errors['empty'] = "aucun champs n'a été saisie ou modifié";
         } else {
-            $traitement = new homeTreatment($_POST);
+            $table = array();
+            foreach ($_POST as $k => $v){
+                if (!empty(trim($v))){
+                    $table[$k] = $v;
+                }
+            }
+            $treatment = new homeTreatment($table, $_FILES);
         }
     }
-
 ?>

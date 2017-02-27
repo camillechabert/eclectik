@@ -1,8 +1,8 @@
 <?php
 
-    include "../mdl_cdr2401dv/connexion_db.php";
+    include "../mdl_cdr2401dv/database.php";
 
-    Class FormTreatment {
+    Class formTreatment {
 
         private $datas;
         private $email;
@@ -33,7 +33,7 @@
             return "Votre " . $el . " contient des caractères non valident";
         }
 
-        public function textCatcher() {
+        private function textCatcher() {
             if(!preg_match($this->text_exp, $this->name)) {
                 self::$errors['name'] = $this->createError("nom");
             }

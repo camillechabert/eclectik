@@ -1,6 +1,4 @@
-
-
-<div class="container">
+<div class="container" xmlns="http://www.w3.org/1999/html">
     <h4>Page accueil</h4>
     <form method="post" action="../helpers/homeFromPost.php" enctype="multipart/form-data">
         <div id="input-file-input" class="section">
@@ -15,7 +13,7 @@
                             <input type="file" name="video">
                         </div>
                         <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
+                            <input class="file-path validate" type="text" placeholder="video">
                         </div>
                     </div>
                 </div>
@@ -29,7 +27,7 @@
                 </div>
                 <div class="col s12 m10 l10">
                     <div class="input-field col s12">
-                        <input id="first_name" type="text" name="slf">
+                        <input id="first_name" type="text" name="slf" placeholder="video">
                         <label for="first_name">Lien Facebook</label>
                     </div>
                 </div>
@@ -40,7 +38,7 @@
                 </div>
                 <div class="col s12 m10 l10">
                     <div class="input-field col s12">
-                        <input id="first_name" type="text" name="sli">
+                        <input id="first_name" type="text" name="sli" placeholder="video">
                         <label for="first_name">Lien Instagram</label>
                     </div>
                 </div>
@@ -49,7 +47,7 @@
             <div class="row">
                 <div class="col s12 m10 l12">
                     <div class="input-field col s12">
-                        <input id="first_name" type="text" name="addSocial">
+                        <input id="first_name" type="text" name="addSocial" placeholder="video">
                         <label for="first_name">Lien</label>
                     </div>
                 </div>
@@ -62,7 +60,7 @@
                             <input type="file" name="icon">
                         </div>
                         <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
+                            <input class="file-path validate" type="text" placeholder="video">
                         </div>
                     </div>
                 </div>
@@ -87,7 +85,7 @@
                             <input type="file" name="logo">
                         </div>
                         <div class="file-path-wrapper">
-                            <input class="file-path validate" type="text">
+                            <input class="file-path validate" type="text" placeholder="video">
                         </div>
                     </div>
                 </div>
@@ -97,21 +95,11 @@
                     <h5>Mentions légales:</h5>
                 </div>
                 <div class="col s12 m10 l10">
-                    <div class="input-field col s12">
-                        <textarea name="mentions" id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Texte</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 m2 l2">
-                    <h5>CGU:</h5>
-                </div>
-                <div class="col s12 m10 l10">
-                    <div class="input-field col s12">
-                        <textarea name="cgu" id="textarea1" class="materialize-textarea"></textarea>
-                        <label for="textarea1">Texte</label>
-                    </div>
+                    <input type="button" class="btn trr" value="G" onclick="commande('bold');">
+                    <input type="button" class="btn trr" value="I" onclick="commande('italic');">
+                    <input type="button"  class="btn trr" value="S" onclick="commande('underline');">
+                    <input type="hidden" value="" name="mentions">
+                    <div contenteditable="true" style="height:250px; overflow: auto" class="collection" id="textarea"></div>
                 </div>
             </div>
         </div>

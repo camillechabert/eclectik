@@ -1,3 +1,7 @@
+function commande(nom) {
+    document.execCommand(nom, false);
+}
+
 $(document).ready(function(){
     var menu = document.getElementsByClassName('menu');
     $('#btn-menu').on('click', function() {
@@ -11,8 +15,18 @@ $(document).ready(function(){
 
     function initialiseMediaPlayer() {
         mediaPlayer = document.getElementById('video');
-        mediaPlayer.controls = false;
+        if (mediaPlayer) mediaPlayer.controls = false;
     }
+    initialiseMediaPlayer();
 
-    initialiseMediaPlayer()
+    $('#textarea').on('keyup', function() {
+        $('[name=mentions]').val($(this).html());
+    });
+
+    $(".trr").on('click', function (e) {
+        $('[name=mentions]').val($('#textarea').html());
+    })
 });
+
+
+

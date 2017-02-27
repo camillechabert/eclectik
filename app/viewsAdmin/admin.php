@@ -72,7 +72,7 @@ include 'templatesManager/generator.php'; ?>
           </li>
         </ul>
       </div>
-      <div id="app" class="col s11 no-padding">
+      <div id="app" class="col s10 no-padding">
         <?php
           echo $twig->render('accueil.php');
         ?>
@@ -81,5 +81,6 @@ include 'templatesManager/generator.php'; ?>
     <script  src="../../bower_components/jquery/dist/jquery.min.js"></script>
     <script src="../assets/js/materialize.min.js"></script>
     <script src="templatesManager/callTemplates.js"></script>
+    <script src="../assets/js/global.js"></script>
   </body>
 </html>

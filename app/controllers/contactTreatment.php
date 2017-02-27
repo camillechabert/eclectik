@@ -1,6 +1,6 @@
 <?php
 
-include "../mdl_cdr2401dv/connexion_db.php";
+include "../mdl_cdr2401dv/database.php";
 
 Class contactTreatment {
 

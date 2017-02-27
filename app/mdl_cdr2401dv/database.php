@@ -32,9 +32,23 @@ class database {
         } catch (PDOException $e) {
             $this->queryErr = true;
             $this->errMsg = 'Query error : ' . $e->getMessage();
-            var_dump($this->errMsg);
         }
         return $stt;
+    }
+
+    public function build_request($index, $datas, $table, $array) {
+        $id = $index;
+        $i = 0;
+        $l = count($datas);
+        $rqs = 'UPDATE ' .$table.' SET ';
+        foreach($datas as $k => $v) {
+            $rqs .= $array[':'.$k];
+            $rqs .= '=';
+            $rqs .= ':'.$k;
+            $rqs .= ($i >= $l - 1) ? ' ' : ', ';
+            $i++;
+        }
+        return $rqs .= 'WHERE id = ' . $id;
     }
 
     public function disconnect() {
