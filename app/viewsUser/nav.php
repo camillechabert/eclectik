@@ -8,7 +8,7 @@
 <div class="menu deactivate">
     <ul>
         <li>
-            <a class="border" href="#">Actualités</a>
+            <a class="border" href="index.php">Home</a>
         </li>
         <li>
             <a class="border" href="#">Collections</a>

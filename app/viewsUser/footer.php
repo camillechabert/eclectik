@@ -1,13 +1,7 @@
 <footer>
     <ul>
         <li>
-            <a href="">cgu</a>
-        </li>
-        <li>
-            <a href="">mentions légales</a>
-        </li>
-        <li>
-            <a href="">site by <span>Camille Chabert</span></a>
+            <a href="mentions.php">cgu - mentions légales</a>
         </li>
     </ul>
 </footer>

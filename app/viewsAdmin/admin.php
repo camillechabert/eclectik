@@ -1,6 +1,10 @@
 <?php
 include '../../vendor/autoload.php';
 include 'templatesManager/generator.php'; ?>
+<?php
+session_start();
+
+if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
 
 <!DOCTYPE html>
 <html>
@@ -27,7 +31,7 @@ include 'templatesManager/generator.php'; ?>
           <ul class="right">
             <li><a data-href="profil">Profil</a></li>
             <li><a data-href="mail">Mail</a></li>
-            <li><a data-href="disconnect">Déconnexion</a></li>
+            <li><a href="../controllers/logoutTreatment.php" data-href="disconnect">Déconnexion</a></li>
           </ul>
         </div>
       </nav>
@@ -47,15 +51,6 @@ include 'templatesManager/generator.php'; ?>
               <ul>
                 <li><a class="pages" data-href="addCollection">Ajouter une collection</a></li>
                 <li><a class="pages" data-href="allCollections">Toutes les collections</a></li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <div class="collapsible-header">Articles<i class="petite material-icons right">keyboard_arrow_down</i></div>
-            <div class="collapsible-body category">
-              <ul>
-                <li><a class="pages" data-href="addArticle">Ajouter un article</a></li>
-                <li><a class="pages" data-href="allArticles">Tous les articles</a></li>
               </ul>
             </div>
           </li>
@@ -84,3 +79,11 @@ include 'templatesManager/generator.php'; ?>
     <script src="../assets/js/global.js"></script>
   </body>
 </html>
+
+  <?php
+
+  } else {
+   header('location: login.php');
+   session_destroy();
+  }
+?>

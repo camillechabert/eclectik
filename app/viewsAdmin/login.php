@@ -11,28 +11,24 @@
   <body class="cyan darken-4 loaded">
       <div id="login-page" class="row">
        <div class="col s12 z-depth-4 card-panel">
-         <form class="login-form">
+         <form class="login-form" method="post" action="../controllers/loginTreatment.php">
            <div class="row">
              <div class="input-field col s12 center">
-               <img src="../assets/images/logo_eclectik.png" alt="" class="logo-form responsive-img valign profile-image-login">
+               <img src="../assets/images/logo_eclectik.png" class="logo-form responsive-img valign profile-image-login">
              </div>
            </div>
-           <div class="row margin">
-             <div class="input-field col s12">
-               <input id="username" type="text">
-               <label for="username" class="center-left">Identifiant</label>
-             </div>
+           <div class="input-field col s12">
+             <input id="username" name="username" type="text">
+             <label for="username" class="center-left">Identifiant</label>
            </div>
-           <div class="row margin">
-             <div class="input-field col s12">
-               <input id="password" type="password">
-               <label for="password">Mot de passe</label>
-             </div>
+           <div class="input-field col s12">
+             <input id="password" name="password" type="password">
+             <label for="password">Mot de passe</label>
            </div>
            <div class="row">
-             <div class="input-field col s12">
-               <a href="admin.php" class="btn waves-effect blue-grey darken-4 col s12">CONNEXION</a>
-             </div>
+             <button class="btn waves-effect waves-light right" type="submit">
+               connexion
+             </button>
            </div>
            <div class="row">
              <div class="input-field ol s12 m12 l12">

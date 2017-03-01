@@ -1,3 +1,5 @@
+<?php include ''?>
+
 <div class="container" xmlns="http://www.w3.org/1999/html">
     <h4>Page accueil</h4>
     <form method="post" action="../helpers/homeFromPost.php" enctype="multipart/form-data">

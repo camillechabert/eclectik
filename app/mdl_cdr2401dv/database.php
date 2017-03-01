@@ -33,7 +33,7 @@ class database {
             $this->queryErr = true;
             $this->errMsg = 'Query error : ' . $e->getMessage();
         }
-        return $stt;
+        return $stt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function build_request($index, $datas, $table, $array) {
