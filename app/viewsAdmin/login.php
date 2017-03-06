@@ -11,7 +11,7 @@
   <body class="cyan darken-4 loaded">
       <div id="login-page" class="row">
        <div class="col s12 z-depth-4 card-panel">
-         <form class="login-form" method="post" action="../controllers/loginTreatment.php">
+         <form class="login-form" method="post" action="../helpers/loginFromPost.php">
            <div class="row">
              <div class="input-field col s12 center">
                <img src="../assets/images/logo_eclectik.png" class="logo-form responsive-img valign profile-image-login">

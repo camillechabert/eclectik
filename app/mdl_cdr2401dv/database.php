@@ -24,7 +24,7 @@ class database {
         }
     }
 
-    public function request_db($sql, $params) {
+    public function request_db($sql, $params, $return = true) {
         $stt = null;
         try {
             $stt = $this->dbh->prepare($sql, $params);
@@ -33,7 +33,7 @@ class database {
             $this->queryErr = true;
             $this->errMsg = 'Query error : ' . $e->getMessage();
         }
-        return $stt->fetch(PDO::FETCH_ASSOC);
+        if ($return) return $stt->fetchAll(PDO::FETCH_ASSOC);
     }
 
     public function build_request($index, $datas, $table, $array) {
@@ -48,7 +48,14 @@ class database {
             $rqs .= ($i >= $l - 1) ? ' ' : ', ';
             $i++;
         }
-        return $rqs .= 'WHERE id = ' . $id;
+        $rqs .= 'WHERE id = ' . $id;
+        return $rqs;
+    }
+
+    public static function saveData($sqlR, $params, $return = true) {
+        $pdo = new database();
+        $sql = $sqlR;
+        return $pdo->request_db($sql, $params, $return);
     }
 
     public function disconnect() {

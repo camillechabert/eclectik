@@ -1,9 +1,9 @@
 <?php
-include '../../vendor/autoload.php';
-include 'templatesManager/generator.php'; ?>
-<?php
-session_start();
 
+include '../../vendor/autoload.php';
+include 'templatesManager/generator.php';
+
+session_start();
 if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
 
 <!DOCTYPE html>
@@ -29,8 +29,7 @@ if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
             </li>
           </ul>
           <ul class="right">
-            <li><a data-href="profil">Profil</a></li>
-            <li><a data-href="mail">Mail</a></li>
+            <li><a data-href="profil" class="pages">Profil</a></li>
             <li><a href="../controllers/logoutTreatment.php" data-href="disconnect">Déconnexion</a></li>
           </ul>
         </div>
