@@ -84,6 +84,30 @@ div.contact {
         div.contact div div.infos a img:hover {
           opacity: 0.8; }
 
+@media screen and (max-width: 768px) {
+  div.contact {
+    height: 100%; }
+    div.contact h1.title {
+      transform: rotate(-90deg) translateY(-45px) translateX(-85px); }
+    div.contact div div.form {
+      justify-content: center;
+      width: 100%; }
+    div.contact div.infos {
+      margin-left: 10%;
+      margin-bottom: 20px; } }
+@media screen and (max-width: 480px) {
+  div.contact {
+    height: 100%; }
+    div.contact h1.title {
+      transform: rotate(-90deg) translateY(-45px) translateX(-85px); }
+    div.contact div div.form {
+      justify-content: flex-end;
+      min-width: 280px; }
+      div.contact div div.form form {
+        min-width: 230px; }
+    div.contact div.infos {
+      margin-left: 10%;
+      margin-bottom: 20px; } }
 div.cgu h1.title {
   transform: rotate(-90deg) translateY(-30px) translateX(-190px);
   color: black; }

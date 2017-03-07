@@ -88,3 +88,47 @@ div.contact {
     }
   }
 }
+
+@media screen and (max-width: 768px){
+  div.contact {
+    h1.title {
+      transform: rotate(-90deg) translateY(-45px) translateX(-85px);;
+    }
+    height: 100%;
+    div {
+      div.form {
+        justify-content: center;
+        width: 100%;
+        form {
+
+        }
+      }
+    }
+    div.infos {
+      margin-left: 10%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px){
+  div.contact {
+    h1.title {
+      transform: rotate(-90deg) translateY(-45px) translateX(-85px);;
+    }
+    height: 100%;
+    div {
+      div.form {
+        justify-content: flex-end;
+        min-width: 280px;
+        form {
+          min-width: 230px;
+        }
+      }
+    }
+    div.infos {
+      margin-left: 10%;
+      margin-bottom: 20px;
+    }
+  }
+}
