@@ -31,7 +31,16 @@ function getTemplate(template) {
             console.log("error");
         })
         .always(function() {
-            console.log("complete")
+            console.log("complete");
         });
 }
+
+$(document).ready(function(){
+    var urlParams, i, params;
+    //check url of the page
+    urlParams = window.location.search;
+    i = urlParams.indexOf("=");
+    params = urlParams.substring(i + 1, urlParams.length);
+    if(params) getTemplate(params);
+});
 

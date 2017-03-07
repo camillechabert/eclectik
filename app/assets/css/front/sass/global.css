@@ -84,6 +84,14 @@ div.contact {
         div.contact div div.infos a img:hover {
           opacity: 0.8; }
 
+div.cgu h1.title {
+  transform: rotate(-90deg) translateY(-30px) translateX(-190px);
+  color: black; }
+div.cgu p {
+  width: 80%;
+  line-height: 1.4;
+  margin: 5% auto; }
+
 header {
   height: 60px;
   width: 100%;
@@ -138,7 +146,9 @@ html body {
       display: flex; }
     html body section div.main_content {
       flex: 1;
-      display: flex; }
+      display: flex;
+      border: 1px black dashed;
+      overflow: auto; }
 
 #btn-menu {
   width: 25px;

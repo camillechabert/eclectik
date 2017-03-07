@@ -49,7 +49,7 @@ if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
             <div class="collapsible-body category">
               <ul>
                 <li><a class="pages" data-href="addCollection">Ajouter une collection</a></li>
-                <li><a class="pages" data-href="allCollections">Toutes les collections</a></li>
+                <li><a class="pages" data-href="collections">Toutes les collections</a></li>
               </ul>
             </div>
           </li>
@@ -61,8 +61,7 @@ if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
           </li>
           <h5 class="sectionNav">Médias</h5>
           <li>
-            <div class="collapsible-header pages" data-href="photos">Photos</div>
-            <div class="collapsible-header pages" data-href="videos">Vidéos</div>
+            <div class="collapsible-header pages" data-href="medias">Photos et vidéos</div>
           </li>
         </ul>
       </div>

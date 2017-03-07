@@ -67,7 +67,7 @@
             </div>
             <div>
                 <div class="chip">
-                    facebook
+                    Pinterest
                     <i class="close material-icons">close</i>
                 </div>
             </div>
