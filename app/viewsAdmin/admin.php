@@ -25,7 +25,7 @@ if (isset($_SESSION['connecte']) && $_SESSION['connecte'] == true) { ?>
               <img src="../assets/images/logo_eclectik.png">
             </li>
             <li>
-              <a href="#" target="_blank">MON SITE</a>
+              <a href="../viewsUser/index.php" target="_blank">MON SITE</a>
             </li>
           </ul>
           <ul class="right">

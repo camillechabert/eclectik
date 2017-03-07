@@ -35,7 +35,7 @@
                     <div class="file-field input-field">
                         <div class="btn">
                             <span>fichier</span>
-                            <input type="file" name="video">
+                            <input type="file" name="photo">
                         </div>
                         <div class="file-path-wrapper">
                             <input class="file-path validate" type="text" placeholder="video">

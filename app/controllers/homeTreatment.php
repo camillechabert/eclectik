@@ -87,7 +87,7 @@ Class homeTreatment {
 
     private function saveData($pdo) {
         $sql = $pdo->build_request(1, $this->datas, 'accueil', $this->form);
-        $pdo->request_db($sql, $this->datas);
+        $pdo->request_db($sql, $this->datas, false);
     }
 }
 
